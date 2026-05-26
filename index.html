@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMatch - Escolha seus Filmes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Recomovies</h1>
+        <p>Escolha o filme perfeito agora mesmo!</p>
+    </header>
+
+    <section class="search-panel">
+        <div class="filters-form">
+            <div class="filter-group">
+                <label for="genreSelect">Qual gênero você procura?</label>
+                <select id="genreSelect">
+                    <option value="todos">Todos os Gêneros</option>
+                    <option value="Ação">Ação</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Ficção Científica">Ficção Científica</option>
+                    <option value="Crime">Crime</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Animação">Animação</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Comédia">Comédia</option>
+                </select>
+                <div class="error-message"></div>
+            </div>
+
+            <div class="filter-group">
+                <label for="yearInput">De qual ano? (Opcional)</label>
+                <input type="number" id="yearInput" placeholder="Ex: 2019" min="1980" max="2026">
+                <div id="yearError" class="error-message"></div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-clear" id="btnClear">Limpar</button>
+                <button class="btn btn-submit" id="btnSearch"> Buscar Filmes</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="movies-container">
+        <main class="movies-grid" id="moviesGrid"></main>
+    </div>
+
+    <script src="scrypt.js"></script>
+</body>
+</html>
